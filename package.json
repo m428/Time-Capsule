@@ -1,0 +1,33 @@
+{
+  "name": "time_capsule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m428/Time-Capsule.git"
+  },
+  "author": "Mala Nimalasuriya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m428/Time-Capsule/issues"
+  },
+  "homepage": "https://github.com/m428/Time-Capsule#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^0.11.4",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-jwt": "^3.3.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^5.4.1",
+    "mongoose": "^4.3.1",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7"
+  }
+}
