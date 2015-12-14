@@ -27,12 +27,8 @@ db.once('open', (callback) => {
 });
 
 ///// require routes
-app.get('/', function(req, res) { // test
-  res.send('hit test route');
-});
-
-// let userRoutes = require('./routes/user_routes');
-// app.use('/user', user);
+let userRoutes = require('./routes/user_routes');
+app.use('/user', user);
 
 ///// set server and port
 app.set('port', 3000);
