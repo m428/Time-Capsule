@@ -10,11 +10,11 @@ function UserRouter($stateProvider, $urlRouterProvider) {
     // templateUrl: 'index.html' // change to welcome.html
   })
   .state('signup', {
-    url: '/signup',
+    url: '/users/signup',
     templateUrl: 'signup.html'
   })
   .state('login', { // authenticate
-    url: '/login',
+    url: '/users/login',
     templateUrl: 'login.html'
   });
 } // end UserRouter

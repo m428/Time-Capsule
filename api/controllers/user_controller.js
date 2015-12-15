@@ -38,7 +38,6 @@ function createUser(req, res) {
     email: req.body.email,
     password: req.body.password
   });
-  console.log(req.body);
   console.log('inside createUser');
   userObj.save((err, user) => {
     if (err) {
