@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- Declares mapMiniApp as the starting Angular module! -->
+<!-- app within an app! maybe! -->
+<!-- <html class="no-js" ng-app="mapMiniApp"> -->
+<head>
+    <meta charset="utf-8">
+    <title>TimeCapsule</title>
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZo2DVoAQuP2drJmH04Yuwbyus3NYDosQ"></script>
+    <!-- Bower Components -->
+    <script src="../bower_components/modernizr/bin/modernizr"></script>
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+    <!-- Angular Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/addCtrl.js"></script>
+    <script src="js/gservice.js"></script>
+</head>
+<body ng-controller="addCtrl">
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li active><a href="">Home</a></li>
+            <li active><a href="">Logout</a></li>
+        </ul>
+        <h3 class="text-muted">Local Caches</h3>
+    </div>
+    <!-- map and input panel -->
+    <div class="row content">
+        <!-- google map -->
+        <div class="col-md-7">
+            <div id="map"><img src="http://madashelland.com/wp-content/uploads/2010/07/EarthSpace11.jpg"></div>
+            <!-- adding css for map height and width below -->
+            <div id="map" style="width:645px; height:645px"></div>
+        </div>
+        <!-- input panel -->
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <!-- Panel Title -->
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">Cache Something<span></span> <span class="glyphicon glyphicon-globe"></span></h2>
+                </div>
+                <!-- input body -->
+                <div class="panel-body">
+                    <!-- creates form (novalidate disables HTML validation, angular will control) -->
+                    <form name ="addForm" novalidate>
+                        <!-- cache inputs. ng-model binds the values to Angular $scope -->
+                        <h6> All text fields required </h6>
+                        <div class="form-group">
+                            <label for="Title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="City Hideaway" ng-model="formData.title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="blerb">Blerb</label>
+                            <input type="text" class="form-control" id="blerb" placeholder="Getting away in the most crowded places." ng-model="formData.blerb" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Photo</label>
+                            <input type="url" class="form-control" id="image" placeholder="Add Image URL" ng-model="formData.image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="longitude">Longitude</label>
+                            <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="verified">Verify Location <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                            <input type="text" class="form-control" id="verified" placeholder= "Verified?" ng-model="formData.htmlverified" readonly>
+                        </div>
+                        <!-- submit button tied to createCache() function from addCtrl -->
+                        <button type="submit"  id="buttons" ng-click="createUser()MUST ADD CORRECT FUNCTION!!!!!!!!!!!!!!!!!!!" ng-disabled="addForm.$invalid">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>
+</body>
+</html>

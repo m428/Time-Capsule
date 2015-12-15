@@ -11,14 +11,19 @@ let config = require('./config');
 let user = require('./routes/user_routes');
 let server = require('http').createServer(app);
 let routes = require('./routes/user_routes');
+let methodOverride  = require('method-override');
 let cors = require('cors');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-// todo: require angular
+app.use(bodyParser.urlencoded({extended: true})); // may need false
+app.use('/', express.static(__dirname + '/frontend'));
 app.use('/', express.static(__dirname + '/public'));
 app.use('/scripts', express.static(__dirname + '/node_modules'));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
+app.use(methodOverride());
 app.use(cors());
 
 ///// connect database
@@ -31,11 +36,12 @@ db.once('open', (callback) => {
 });
 
 ///// require routes
-
 app.use(routes);
 
 // let userRoutes = require('./routes/user_routes');
 // app.use('/user', user);
+
+// require('./routes/cache_routes.js')(app); // not sure I need to route through here - for maps
 
 
 ///// set server and port

@@ -11,13 +11,14 @@ h1 {
   font-family: 'Palanquin Dark', sans-serif;
   font-size: 60pt;
   color: white;
+  padding-left: 25px;
 }
 
 #navbar {
   font-size: 20pt;
   background-color: #FF4081;
   margin: 0;
-  padding: 0;
+  padding-left: 25px;
 }
 
 /*signup form styles*/
@@ -26,13 +27,12 @@ h1 {
   /*background-color: #8C9EFF;*/
   color: white;
   margin: 0;
-  padding: 0;
+  padding-left: 25px;
 }
 
 #buttons {
  color: #fff;
  background-color: #FF4081;
- /*text-shadow: -1px 1px #417cb8;*/
  border: none;
  font-family: 'Fira Sans', sans-serif;
 }
@@ -63,4 +63,16 @@ a:active { /* selected link */
     color: #F48FB1;
     text-decoration: none;
     /*font-size: 16pt*/
+}
+
+.footer {
+  background-color: #FFF;
+  position:fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+#github-link {
+  color:#FF4081;
 }
