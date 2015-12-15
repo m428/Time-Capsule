@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Palanquin+Dark:600|Fira+Sans);
+
+body {
+  background-color: #3D5AFE;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 60pt;
+  color: white;
+}
+
+#navbar {
+  font-size: 20pt;
+  background-color: #FF4081;
+  margin: 0;
+  padding: 0;
+}
+
+/*signup form styles*/
+#signup-form {
+  font-size: 15pt;
+  /*background-color: #8C9EFF;*/
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#create-account-button {
+ color: #fff;
+ background-color: #FF4081;
+ /*text-shadow: -1px 1px #417cb8;*/
+ border: none;
+ font-family: 'Fira Sans', sans-serif;
+}
+
+/*link styling*/
+a:link { /* unvisited link */
+    /*color: #03a9f4;*/
+    color: white;
+    text-decoration: none;
+    /*font-size: 15pt*/
+}
+
+a:visited { /* visited link */
+    /*color: #03a9f4;*/
+    color: white;
+    text-decoration: none;
+    /*font-size: 15pt*/
+}
+
+a:hover { /* mouse over link */
+    color: #F48FB1
+;
+    text-decoration: none;
+    /*font-size: 16pt*/
+}
+
+a:active { /* selected link */
+    color: #F48FB1;
+    text-decoration: none;
+    /*font-size: 16pt*/
+}

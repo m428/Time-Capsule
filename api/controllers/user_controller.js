@@ -10,7 +10,7 @@ let config = require('../config'); //  require config file to get secret - move 
 app.set('soSecret', config.secret); // set secret variable
 let routes = require('../routes/user_routes');
 
-/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 ///// make test user (GET http://localhost:3000/user/tester) /////////////////////////
 function makeTestUser(req, res) {
   console.log('hit user/tester');

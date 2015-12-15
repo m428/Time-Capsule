@@ -1,0 +1,28 @@
+<!-- create new user view -->
+<form ng-submit="users.addUser()" id ="newUser">
+<div id="signup-form">
+  <div>
+    <label for="newUser-username">Username</label>
+    <input type="text" id="newUser-username" ng-model="users.newUser.username" placeholder="Username">
+  </div>
+  <div>
+    <label for="newUser-fname">First Name</label>
+    <input type="text" id="newUser-fname" ng-model="users.newUser.fname" placeholder="First Name">
+  </div>
+  <div>
+    <label for="newUser-lname">Last Name</label>
+    <input type="text" id="newUser-lname" ng-model="users.newUser.lname" placeholder="Last Name">
+  </div>
+  <div>
+    <label for="newUser-email">Email</label>
+    <input type="text" id="newUser-email" ng-model="users.newUser.email" placeholder="Email">
+  </div>
+  <div>
+    <label for="newUser-password">Password</label>
+    <input type="password" id="newUser-password" ng-model="users.newUser.password" placeholder="Password">
+  </div>
+  <div>
+   <input type="submit" value="SUBMIT" id="create-account-button">
+  </div>
+</div>
+ </form>

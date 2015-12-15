@@ -2,31 +2,34 @@
 
 let express = require('express');
 let router = express.Router();
-let user = require('../controllers/user_controller');
+let bodyParser = require('body-parser');
+let methodOverride = require('method-override');
 let expressJWT = require('express-jwt');
+let user = require('../controllers/user_controller');
 let config = require('../config');
 let secret = config.secret;
 
+router.route('/users')
 ////////////////////////////////////////////////////////////////////////////////
 ///// unprotected user routes //////////////////////////////////////////////////
-router.route('/signup') // TEST
+// router.route('/signup') // TEST
   .post(user.createUser);
 
-router.route('/authenticate') // TEST
-  .post(user.auth);
+// router.route('/login') // TEST
+  // .post(user.auth);
 
-router.route ('/tester')
-  .get(user.makeTestUser)
+// router.route ('/tester')
+  // .get(user.makeTestUser)
 
 
 ////////////////////////////////////////////////////////////////////////////////
 ///// protected user routes ////////////////////////////////////////////////////
-router.route('/show')
+// router.route('/show')
 // .all(expressJWT({
 //   secret: secret,
 //   userProperty: 'auth'
 // }))
-  .get(user.showAllUsers)
+  // .get(user.showAllUsers)
 
 // router.route('/edit') // TEST
 // .all(expressJWT({

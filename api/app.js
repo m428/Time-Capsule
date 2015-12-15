@@ -10,12 +10,16 @@ let path = require('path');
 let config = require('./config');
 let user = require('./routes/user_routes');
 let server = require('http').createServer(app);
+let routes = require('./routes/user_routes');
+let cors = require('cors');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // todo: require angular
 app.use('/', express.static(__dirname + '/public'));
+app.use('/scripts', express.static(__dirname + '/node_modules'));
+app.use(cors());
 
 ///// connect database
 let mongoose = require('mongoose');
@@ -27,8 +31,12 @@ db.once('open', (callback) => {
 });
 
 ///// require routes
-let userRoutes = require('./routes/user_routes');
-app.use('/user', user);
+
+app.use(routes);
+
+// let userRoutes = require('./routes/user_routes');
+// app.use('/user', user);
+
 
 ///// set server and port
 app.set('port', 3000);
