@@ -11,26 +11,24 @@ app.set('soSecret', config.secret); // set secret variable
 // let routes = require('../routes/cache_routes');
 
 function showAllCaches(req, res) {
-  Cache.find({}, function(err, users) {
+  Cache.find({}, function(err, caches) {
     console.log('hit /caches/show')
+
     res.send(caches);
   });
 }
 
-
 function createCache(req, res) {
   let cacheObj = new Cache(req.body);
-  cachObj.save(function(err) {
+  cacheObj.save(function(err) {
     if(err) {
       res.send(err);
-    } else {
-      return res.status(200).send(cache);
+      } else {
+        console.log(req.body);
+      res.send(req.body);
     }
-    console.log(cache);
-  });
+  })
 }
-
-
 
 
 
