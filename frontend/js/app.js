@@ -16,5 +16,10 @@ function UserRouter($stateProvider, $urlRouterProvider) {
   .state('login', { // authenticate
     url: '/users/login',
     templateUrl: 'login.html'
+  })
+
+  .state('map', {
+    url: '/caches/map',
+    templateUrl: 'map.html'
   });
 } // end UserRouter

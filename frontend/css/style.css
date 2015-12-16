@@ -38,6 +38,11 @@ h1 {
  font-family: 'Fira Sans', sans-serif;
 }
 
+#mapHeader {
+  color: white;
+  font-size: 25pt;
+}
+
 /*link styling*/
 a:link { /* unvisited link */
     /*color: #03a9f4;*/
