@@ -8,9 +8,9 @@ let jwt = require('jsonwebtoken');
 let logger = require('morgan');
 let path = require('path');
 let config = require('./config');
-let user = require('./routes/user_routes');
 let server = require('http').createServer(app);
-let routes = require('./routes/user_routes');
+let userRoutes = require('./routes/user_routes');
+let cacheRoutes = require('./routes/cache_routes');
 let methodOverride  = require('method-override');
 let cors = require('cors');
 
@@ -36,12 +36,10 @@ db.once('open', (callback) => {
 });
 
 ///// require routes
-app.use(routes);
+app.use(userRoutes);
+app.use(cacheRoutes);
 
-// let userRoutes = require('./routes/user_routes');
-// app.use('/user', user);
-
-// require('./routes/cache_routes.js')(app); // not sure I need to route through here - for maps
+// require('./routes/cache_routes.js')(app); // - errors - probably don't need for maps
 
 
 ///// set server and port

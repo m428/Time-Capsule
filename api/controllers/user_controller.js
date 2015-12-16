@@ -8,7 +8,7 @@ let expressjwt = require('express-jwt');
 let app = express();
 let config = require('../config'); //  require config file to get secret - move to bash profile
 app.set('soSecret', config.secret); // set secret variable
-let routes = require('../routes/user_routes');
+// let routes = require('../routes/user_routes');
 
 //////////////////////////////////////////////////////////////////////////////////////
 ///// make test user (GET http://localhost:3000/user/tester) /////////////////////////
@@ -51,7 +51,6 @@ function createUser(req, res) {
 
 /////////////////////////////////////////////////////////////////////////////////////
 ///// show all users (GET http://localhost:3000/user/users) /////////////////////////
-// shows the entire user obj, including encrypted passwords!
 function showAllUsers(req, res) {
   User.find({}, function(err, users) {
     console.log('hit /user/show')
