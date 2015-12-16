@@ -13,13 +13,14 @@ function UserRouter($stateProvider, $urlRouterProvider) {
     url: '/users/signup',
     templateUrl: 'signup.html'
   })
+
   .state('login', { // authenticate
     url: '/users/login',
     templateUrl: 'login.html'
   })
 
   .state('map', {
-    url: '/caches/map',
+    url: '/caches.map',
     templateUrl: 'map.html'
   });
 } // end UserRouter
