@@ -43,6 +43,7 @@ angular.module('gservice', [])
         '<b>Image</b>: ' + user.image +
         '</p>';
 
+        // convert json to maps friendly formatting
         locations.push({
           latlon: new google.maps.LatLng(user.location[1], user.location[0]),
           message: new google.maps.InfoWindow({
@@ -233,7 +234,7 @@ angular.module('gservice', [])
           mapTypeIds: ['Styled']
         },
         center: myLatLng,
-        zoom: 3,
+        zoom: 4,
         disableDefaultUI: true,
         mapTypeId: 'Styled'
       };
