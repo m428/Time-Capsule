@@ -19,5 +19,3 @@
   "license": "ISC",
   "description": ""
 }
-
-// add postinstall: "bower install" install so heroku will also install bower components.
