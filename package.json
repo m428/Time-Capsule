@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install"
+    "postinstall": "bower_components"
   },
   "version": "1.0.0",
   "devDependencies": {},
