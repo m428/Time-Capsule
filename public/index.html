@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" ng-app="timeCapsule">
+<head>
+    <meta charset="utf-8">
+    <title>TimeCapsule</title>
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <script src="../bower_components/holderjs/holder.js"></script> -->
+
+
+    <!-- Google Maps API  - add my key below -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZo2DVoAQuP2drJmH04Yuwbyus3NYDosQ"></script>
+    <script src="../bower_components/modernizr/bin/modernizr"></script>
+    <!-- bower components -->
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+    <!-- angular scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/addCtrl.js"></script>
+    <script src="js/gservice.js"></script>
+</head>
+<body ng-controller="addCtrl">
+   <h1>TimeCapsule</h1>
+   <nav id="navbar">
+      <!-- edit navigation - move home button -->
+     <a ui-sref="index">Home</a> |
+     <a ui-sref="signup">Create Account</a> |
+     <a ui-sref="login">Login</a> |
+     <a ui-sref="map">View Map</a>
+   </nav><br>
+<div class="container">
+    <div class="header">
+        <h3 id="mapHeader">Local Caches</h3>
+    </div>
+    <div class="row-content">
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <!-- <div id="map"><img src="http://madashelland.com/wp-content/uploads/2010/07/EarthSpace11.jpg"></div> -->
+        <!-- map injected here             -->
+        <div id="map" style="width:800px; height:500px"></div>
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">Cache Something <img src=http://i.imgur.com/bLKL1RG.png><span></span> <span class="glyphicon glyphicon-globe"></span></h2>
+                </div>
+                <div class="panel-body">
+                    <!-- create form -->
+                    <form name ="addForm" novalidate>
+                        <!-- user form inputs - ng-model binds values to angular $scope -->
+                        <h6> All fields required </h6>
+                        <div class="form-group">
+                            <label for="Title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="City Hideaway" ng-model="formData.title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="blerb">Blerb</label>
+                            <input type="text" class="form-control" id="blerb" placeholder="Getting away in the most crowded places." ng-model="formData.blerb" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Photo</label>
+                            <input type="url" class="form-control" id="image" placeholder="Add Image URL" ng-model="formData.image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="latitude">Latitude</label>
+                            <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="longitude">Longitude</label>
+                            <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="verified">Verify Location <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                            <input type="text" class="form-control" id="verified" placeholder= "Verified?" ng-model="formData.htmlverified" readonly>
+                        </div>
+                        <!-- submit button tied to createUser() function from addCtrl -->
+                        <button type="submit"  id="buttons" ng-click="createUser()" >Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</div>
+    <div class="footer">
+      <p class="text-center"><span ></span><img src="http://i.imgur.com/iEyMDQB.png"> Mala Nimalasuriya 2015 | <a href="https://github.com/m428" id="github-link">Github/M428</a></p>
+    </div>
+</body>
+</html>

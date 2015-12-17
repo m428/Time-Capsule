@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Palanquin+Dark:600|Fira+Sans);
+
+body {
+  background-color: #616161;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 {
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 50pt;
+  color: white;
+  padding-left: 25px;
+}
+
+h2 {
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 18pt;
+  color: #616161;
+  padding-left: 25px;
+}
+
+#navbar {
+  font-size: 15pt;
+  background-color: #FFD600;
+  margin: 0;
+  /*color: #616161;*/
+  padding-top: 5px;
+  padding-left: 25px;
+}
+
+/*signup form styles*/
+#signup-form {
+  font-size: 15pt;
+  /*background-color: #8C9EFF;*/
+  color: white;
+  margin: 0;
+  padding-left: 25px;
+}
+
+#buttons {
+ color: #fff;
+ background-color: #616161;
+ border: none;
+ font-family: 'Fira Sans', sans-serif;
+}
+
+#mapHeader {
+  color: white;
+  font-size: 25pt;
+  margin-left: 50px;
+}
+
+#mapPanel {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: grey;
+}
+
+
+
+.row-content {
+  /*overflow: auto;*/
+}
+
+.col-md-7 {
+/*float: left;
+margin-left: 100px;*/
+display: inline-block;
+margin-left: 50px;
+}
+
+.col-md-5 {
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 70px;
+  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 75px;
+  position:relative;top:-110px;
+  background-color: #FFD600;
+  color: #616161;
+}
+
+
+
+
+
+/*link styling*/
+a { /* unvisited link */
+    /*color: #03a9f4;*/
+    color: #616161;
+    text-decoration: none;
+    /*font-size: 15pt*/
+}
+
+a:visited { /* visited link */
+    /*color: #03a9f4;*/
+    /*color: white;*/
+    text-decoration: none;
+    /*font-size: 15pt*/
+}
+
+a:hover { /* mouse over link */
+    color: #03A9F4;
+    text-decoration: none;
+    /*font-size: 16pt*/
+}
+
+a:active { /* selected link */
+    /*color: #F48FB1;*/
+    text-decoration: none;
+    /*font-size: 16pt*/
+}
+
+.footer {
+  background-color: #FFF;
+  position:fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+#github-link {
+  color:#03A9F4;
+}
