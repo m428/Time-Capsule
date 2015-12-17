@@ -17,4 +17,7 @@
   "author": "Mala Nimalasuriya",
   "license": "ISC",
   "description": ""
-}
+},
+"scripts": {
+    "postinstall": "bower install"
+  }
