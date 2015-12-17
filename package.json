@@ -1,37 +1,20 @@
 {
-  "name": "time_capsule",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "mean-maps-app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.7.2",
+    "mongoose": "~4.1.0",
+    "morgan": "~1.2.2",
+    "body-parser": "~1.5.2",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "~2.1.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m428/Time-Capsule.git"
-  },
+  "version": "1.0.0",
+  "devDependencies": {},
   "author": "Mala Nimalasuriya",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/m428/Time-Capsule/issues"
-  },
-  "homepage": "https://github.com/m428/Time-Capsule#readme",
-  "dependencies": {
-    "angular": "^1.4.8",
-    "angular-animate": "^1.4.8",
-    "angular-aria": "^1.4.8",
-    "angular-material": "^0.11.4",
-    "bcrypt": "^0.8.5",
-    "body-parser": "^1.14.1",
-    "cors": "^2.7.1",
-    "express": "^4.13.3",
-    "express-jwt": "^3.3.0",
-    "http": "0.0.0",
-    "jsonwebtoken": "^5.4.1",
-    "method-override": "^2.3.5",
-    "mongoose": "^4.3.1",
-    "morgan": "^1.6.1",
-    "path": "^0.12.7",
-    "underscore": "^1.8.3"
-  }
+  "description": ""
 }
