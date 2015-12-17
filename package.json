@@ -10,14 +10,14 @@
     "method-override": "~2.1.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "version": "1.0.0",
   "devDependencies": {},
   "author": "Mala Nimalasuriya",
   "license": "ISC",
   "description": ""
-},
-"scripts": {
-    "postinstall": "bower install"
-  }
+}
+
+// add postinstall: "bower install" install so heroku will also install bower components.
