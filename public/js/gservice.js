@@ -278,7 +278,7 @@ angular.module('gservice', [])
         position: initialLocation,
         animation: google.maps.Animation.BOUNCE,
         map: map,
-        icon: 'http://orig03.deviantart.net/1eab/f/2008/129/e/9/get_colored_with_the_rainbow_by_debadyuti.gif',
+        icon: 'http://orig06.deviantart.net/4cb9/f/2008/183/5/0/free_robot_icon_by_make2307.gif',
       });
 
       lastMarker = marker;
@@ -290,7 +290,7 @@ angular.module('gservice', [])
           position: e.latLng,
           animation: google.maps.Animation.BOUNCE,
           map: map,
-          icon: 'http://orig03.deviantart.net/1eab/f/2008/129/e/9/get_colored_with_the_rainbow_by_debadyuti.gif'
+          icon: 'http://orig06.deviantart.net/4cb9/f/2008/183/5/0/free_robot_icon_by_make2307.gif'
         });
 
         if(lastMarker) {
