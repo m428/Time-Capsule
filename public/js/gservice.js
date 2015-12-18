@@ -70,7 +70,8 @@ angular.module('gservice', [])
                 "saturation": 36
             },
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#757575"
             },
             {
                 "lightness": 40
@@ -85,7 +86,8 @@ angular.module('gservice', [])
                 "visibility": "on"
             },
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#757575"
             },
             {
                 "lightness": 16
@@ -106,7 +108,8 @@ angular.module('gservice', [])
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#757575"
             },
             {
                 "lightness": 20
@@ -118,7 +121,8 @@ angular.module('gservice', [])
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#757575"
             },
             {
                 "lightness": 17
@@ -133,7 +137,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd600"
             },
             {
                 "lightness": 20
@@ -145,7 +150,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd600"
             },
             {
                 "lightness": 21
@@ -157,7 +163,8 @@ angular.module('gservice', [])
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffff00"
             },
             {
                 "lightness": 17
@@ -169,7 +176,8 @@ angular.module('gservice', [])
         "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd601"
             },
             {
                 "lightness": 29
@@ -184,7 +192,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd601"
             },
             {
                 "lightness": 18
@@ -196,7 +205,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd601"
             },
             {
                 "lightness": 16
@@ -208,7 +218,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#424242"
+                // "color": "#424242"
+                "color": "#ffd600"
             },
             {
                 "lightness": 19
@@ -220,7 +231,8 @@ angular.module('gservice', [])
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#ffd600"
+              "color": "#424242"
+                // "color": "#ffd600"
             },
             {
                 "lightness": 17
@@ -234,7 +246,7 @@ angular.module('gservice', [])
           mapTypeIds: ['Styled']
         },
         center: myLatLng,
-        zoom: 4,
+        zoom: 8,
         disableDefaultUI: true,
         mapTypeId: 'Styled'
       };
@@ -278,7 +290,7 @@ angular.module('gservice', [])
         position: initialLocation,
         animation: google.maps.Animation.BOUNCE,
         map: map,
-        icon: 'http://orig06.deviantart.net/4cb9/f/2008/183/5/0/free_robot_icon_by_make2307.gif',
+        icon: 'http://orig06.deviantart.net/eaea/f/2010/031/6/5/robot_av_by_sweetmusichearts.gif',
       });
 
       lastMarker = marker;
@@ -290,7 +302,7 @@ angular.module('gservice', [])
           position: e.latLng,
           animation: google.maps.Animation.BOUNCE,
           map: map,
-          icon: 'http://orig06.deviantart.net/4cb9/f/2008/183/5/0/free_robot_icon_by_make2307.gif'
+          icon: 'http://orig06.deviantart.net/eaea/f/2010/031/6/5/robot_av_by_sweetmusichearts.gif'
         });
 
         if(lastMarker) {
