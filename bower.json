@@ -1,0 +1,26 @@
+{
+  "name": "mean-maps-app",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Mala Nimalasuriya"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/m428/Time-Capsule",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "angularjs-geolocation": "~0.1.1",
+    "bootstrap": "~3.3.6",
+    "modernizr": "~3.2.0"
+  }
+}
